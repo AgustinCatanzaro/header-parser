@@ -5,14 +5,6 @@ const headerParser = (req, res) => {
 	let data = new Map()
 
 	//iterating over the req.header object where i will get only the pair of key/value that i need.
-	// for (const [key, value] of Object.entries(req.headers)) {
-	// 	if (key == 'user-agent') {
-	// 		data.set(key, value)
-	// 	}
-	// 	if (key == 'accept-language') {
-	// 		data.set(key, value)
-	// 	}
-	// }
 	for (const [key, value] of Object.entries(req.headers)) {
 		if (key == 'user-agent' || key == 'accept-language') {
 			data.set(key, value)
