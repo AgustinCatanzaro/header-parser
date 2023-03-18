@@ -11,7 +11,7 @@ const headerParser = (req, res) => {
 		}
 	}
 
-	//idk if its ok to use the req.i[/data.get directly in the response or if i should assignt that value to a variable and then use that.
+	//idk if its ok to use the req.ip/data.get directly in the response or if i should assignt that value to a variable and then use that.
 	res.status(StatusCodes.OK).json({
 		ipadress: req.ip,
 		language: data.get('accept-language'),
